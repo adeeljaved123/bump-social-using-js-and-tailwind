@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px] h-screen">
+    <!-- nav -->
+  <div class="items-center justify-between   px-3 py-[21px] lg:flex  hidden  2xl:max-w-screen">
+    <div class="md:flex items-center gap-2  hidden">
+        <h1 class="text-xs font-medium">Dashboard</h1>
+        <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+        <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+    </div>
+    <div class="flex items-center gap-3 ">
+       <div class="relative hidden md:block max-w-[230px] w-full">
+          <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+         <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+           </svg>
+           <span class="sr-only">Search icon</span>
+         </div>
+       </div>
+        <img src="./assets/images/messages.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/notification.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/pic.png" alt="" class="">
+    </div>
+ </div>
+    <!-- main content -->
+     <div class="px-3 md:px-5 lg:px-8 pt-6 bg-[#F7F7F8] h-screen">
+          <div class="md:py-7 py-5 px-3 lg:pl-9 lg:pr-14 rounded-2xl bg-white shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+            <h1 class="text-lg font-bold text-black mb-6">Redemption History</h1>
+            <!-- grid section -->
+             <div class="w-full grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-5">
+                <!-- card 1 -->
+                <div class="p-[10px] lg rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="mb-3 w-full">
+                        <img src="./assets/images/shirt 1.png" alt="" class="h-[112px] w-full">
+                    </div>
+                        <h1 class="text-sm font-bold text-black mb-3">Shirt</h1>
+                    <p class="text-[10px] font-normal text-black mb-3">Lorem Ipsum is simply dummy text of the printing and industry abd th....</p>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <!-- buttons -->
+                    <button type="button" class="w-full py-2 bg-[#F7F7F8] rounded-lg text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Redeemed</button>
+                </div>
+                <!-- card 2 -->
+                <div class="p-[10px] lg rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="mb-3 w-full">
+                        <img src="./assets/images/shirt 1.png" alt="" class="h-[112px] w-full">
+                    </div>
+                        <h1 class="text-sm font-bold text-black mb-3">Shirt</h1>
+                    <p class="text-[10px] font-normal text-black mb-3">Lorem Ipsum is simply dummy text of the printing and industry abd th....</p>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <!-- buttons -->
+                    <button type="button" class="w-full py-2 bg-[#F7F7F8] rounded-lg text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Redeemed</button>
+                </div>
+                <!-- card 3 -->
+                <div class="p-[10px] lg rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="mb-3 w-full">
+                        <img src="./assets/images/shirt 1.png" alt="" class="h-[112px] w-full">
+                    </div>
+                        <h1 class="text-sm font-bold text-black mb-3">Shirt</h1>
+                    <p class="text-[10px] font-normal text-black mb-3">Lorem Ipsum is simply dummy text of the printing and industry abd th....</p>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <!-- buttons -->
+                    <button type="button" class="w-full py-2 bg-[#F7F7F8] rounded-lg text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Redeemed</button>
+                </div>
+                <!-- card 4 -->
+                <div class="p-[10px] lg rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="mb-3 w-full">
+                        <img src="./assets/images/shirt 1.png" alt="" class="h-[112px] w-full">
+                    </div>
+                        <h1 class="text-sm font-bold text-black mb-3">Shirt</h1>
+                    <p class="text-[10px] font-normal text-black mb-3">Lorem Ipsum is simply dummy text of the printing and industry abd th....</p>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <!-- buttons -->
+                    <button type="button" class="w-full py-2 bg-[#F7F7F8] rounded-lg text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Redeemed</button>
+                </div>
+                <!-- card 5 -->
+                <div class="p-[10px] lg rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="mb-3 w-full">
+                        <img src="./assets/images/shirt 1.png" alt="" class="h-[112px] w-full">
+                    </div>
+                        <h1 class="text-sm font-bold text-black mb-3">Shirt</h1>
+                    <p class="text-[10px] font-normal text-black mb-3">Lorem Ipsum is simply dummy text of the printing and industry abd th....</p>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <div class="flex gap-2 items-center mb-3">
+                        <img src="./assets/images/dollar.png" alt="" class="size-4">
+                        <p class="text-xs font-normal text-black">20</p>
+                    </div>
+                    <!-- buttons -->
+                    <button type="button" class="w-full py-2 bg-[#F7F7F8] rounded-lg text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Redeemed</button>
+                </div>
+             </div>
+          </div>
+     </div>
+ </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>

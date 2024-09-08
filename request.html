@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="path/to/nice-select.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        .currentt{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .nice-select .list{
+            max-width: 327px;
+            width: 100%;
+        }
+        .nice-select{
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+        }
+        .button:hover{
+          background-color: #FF8717 !important;
+          color: white !important;
+        }
+        .button{
+          background-color: white !important;
+          color: #1F2A37 !important;
+          border: 1px solid #E5E7EB;
+        }
+        .datepicker-cell:hover{
+          background-color: #FF8717 !important;
+          color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px] h-screen">
+    <!-- nav -->
+  <div class="items-center justify-between   px-3 py-[21px] lg:flex  hidden  2xl:max-w-screen">
+    <div class="md:flex items-center gap-2  hidden">
+        <h1 class="text-xs font-medium">Dashboard</h1>
+        <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+        <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+    </div>
+    <div class="flex items-center gap-3 ">
+       <div class="relative hidden md:block max-w-[230px] w-full">
+          <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+         <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+           </svg>
+           <span class="sr-only">Search icon</span>
+         </div>
+       </div>
+        <img src="./assets/images/messages.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/notification.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/pic.png" alt="" class="">
+    </div>
+ </div>
+    <!-- main content -->
+     <div class=" bg-[#F7F7F8] py-6 md:pl-7 md:pr-8 px-3 h-screen">
+          <div class="">
+             <!-- tabs buttons -->
+            <div class="max-w-[284px] w-full mb-6 p-1 bg-[#FF8717] rounded-lg">
+                <ul class="flex justify-center rounded-lg text-white text-xs font-medium text-center " id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                    <li class="" role="presentation">
+                        <button class="inline-block w-[137px] py-[5px] rounded-lg !text-white aria-selected:!text-[#030229] aria-selected:bg-white" id="profile-tab" data-tabs-target="#Brand" type="button" role="tab" aria-controls="Brand" aria-selected="false">Point Requests</button>
+                    </li>
+                    <li class="" role="presentation">
+                        <button class="inline-block w-[137px] py-[5px] rounded-lg !text-white aria-selected:!text-[#030229] aria-selected:bg-white" id="Creator-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="Creator" aria-selected="false">Cash Order</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- tabs data -->
+            <div id="default-tab-content">
+                <div class="hidden rounded-lg bg-gray-50" id="Brand" role="tabpanel" aria-labelledby="Brand-tab">
+                    <!-- grid -->
+                     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- card -->
+                         <div class="p-3 rounded-xl bg-white shadow-[0px_0px_20px_0px_#3D3D3D1F]">
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/pic.png" alt="" class="size-8">
+                                <h1 class="text-lg font-semibold text-[#333333]">Jennifer Smith</h1>
+                            </div>
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/location-pin.png" alt="" class="size-6">
+                                <h1 class="text-sm font-bold pr-1">Country: <span class="text-sm font-normal text-gray-400">USA</span></h1>
+                                <div class="text-gray-400 text-sm font-normal">|</div>
+                                <h1 class="text-sm font-bold pr-1">State: <span class="text-sm font-normal text-gray-400">California</span></h1>
+                            </div>
+                            <div class="flex gap-[2px] mb-2">
+                                <img src="./assets/images/map-pin-alt.png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">1234 Oak Street, Los Angeles, CA 90001</p>
+                            </div>
+                            <div class="flex gap-[2px] mb-5">
+                                <img src="./assets/images/phone (1).png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">+ 92 300 218 7575</p>
+                            </div>
+                            <h1 class="text-base font-semibold text-[#333333] mb-2">Requested For</h1>
+                            <div class="flex gap-3 mb-2 pb-2 border-b border-[#F3F4F6]">
+                                <img src="./assets/images/shirt-product.png" alt="" class="w-[100px] h-[100px]">
+                                <div class="flex flex-col gap-y-1">
+                                    <h1 class="text-lg font-semibold text-[#333333]">Shirt</h1>
+                                    <p class="text-sm font-normal text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting.....</p>
+                                    <p class="text-sm font-normal text-[#00AC1C]">200 Points</p>
+                                </div>
+                            </div>
+                            <!-- buttons -->
+                            <button type="button" class="w-full py-2 rounded-lg text-green-800 text-sm font-medium bg-green-100 cursor-pointer">Confirm Delivery</button>
+                         </div>
+                         <!-- card 2 -->
+                         <div class="p-3 rounded-xl bg-white shadow-[0px_0px_20px_0px_#3D3D3D1F]">
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/pic.png" alt="" class="size-8">
+                                <h1 class="text-lg font-semibold text-[#333333]">Jennifer Smith</h1>
+                            </div>
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/location-pin.png" alt="" class="size-6">
+                                <h1 class="text-sm font-bold pr-1">Country: <span class="text-sm font-normal text-gray-400">USA</span></h1>
+                                <div class="text-gray-400 text-sm font-normal">|</div>
+                                <h1 class="text-sm font-bold pr-1">State: <span class="text-sm font-normal text-gray-400">California</span></h1>
+                            </div>
+                            <div class="flex gap-[2px] mb-2">
+                                <img src="./assets/images/map-pin-alt.png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">1234 Oak Street, Los Angeles, CA 90001</p>
+                            </div>
+                            <div class="flex gap-[2px] mb-5">
+                                <img src="./assets/images/phone (1).png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">+ 92 300 218 7575</p>
+                            </div>
+                            <h1 class="text-base font-semibold text-[#333333] mb-2">Requested For</h1>
+                            <div class="flex gap-3 mb-2 pb-2 border-b border-[#F3F4F6]">
+                                <img src="./assets/images/shirt-product.png" alt="" class="w-[100px] h-[100px]">
+                                <div class="flex flex-col gap-y-1">
+                                    <h1 class="text-lg font-semibold text-[#333333]">Shirt</h1>
+                                    <p class="text-sm font-normal text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting.....</p>
+                                    <p class="text-sm font-normal text-[#00AC1C]">200 Points</p>
+                                </div>
+                            </div>
+                            <!-- buttons -->
+                            <button type="button" class="w-full py-2 rounded-lg text-green-800 text-sm font-medium bg-green-100 cursor-pointer">Confirm Delivery</button>
+                         </div>
+                          <!-- card 3 -->
+                          <div class="p-3 rounded-xl bg-white shadow-[0px_0px_20px_0px_#3D3D3D1F]">
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/pic.png" alt="" class="size-8">
+                                <h1 class="text-lg font-semibold text-[#333333]">Jennifer Smith</h1>
+                            </div>
+                            <div class="flex gap-3 items-center mb-2">
+                                <img src="./assets/images/location-pin.png" alt="" class="size-6">
+                                <h1 class="text-sm font-bold pr-1">Country: <span class="text-sm font-normal text-gray-400">USA</span></h1>
+                                <div class="text-gray-400 text-sm font-normal">|</div>
+                                <h1 class="ext-sm font-bold pr-1">State: <span class="text-sm font-normal text-gray-400">California</span></h1>
+                            </div>
+                            <div class="flex gap-[2px] mb-2">
+                                <img src="./assets/images/map-pin-alt.png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">1234 Oak Street, Los Angeles, CA 90001</p>
+                            </div>
+                            <div class="flex gap-[2px] mb-5">
+                                <img src="./assets/images/phone (1).png" alt="" class="size-6">
+                                <p class="text-sm font-normal text-gray-400">+ 92 300 218 7575</p>
+                            </div>
+                            <h1 class="text-base font-semibold text-[#333333] mb-2">Requested For</h1>
+                            <div class="flex gap-3 mb-2 pb-2 border-b border-[#F3F4F6]">
+                                <img src="./assets/images/shirt-product.png" alt="" class="w-[100px] h-[100px]">
+                                <div class="flex flex-col gap-y-1">
+                                    <h1 class="text-lg font-semibold text-[#333333]">Shirt</h1>
+                                    <p class="text-sm font-normal text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting.....</p>
+                                    <p class="text-sm font-normal text-[#00AC1C]">200 Points</p>
+                                </div>
+                            </div>
+                            <!-- buttons -->
+                            <button type="button" class="w-full py-2 rounded-lg text-green-800 text-sm font-medium bg-green-100 cursor-pointer">Confirm Delivery</button>
+                         </div>
+                     </div>
+                </div>
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 ">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
+            </div>
+          </div>
+     </div>
+ </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+       <!-- main body -->
+      <div class="xl:ml-[240px] lg:ml-[200px]  h-screen">
+        <!-- nav -->
+  <div class="items-center justify-between   px-3 py-[21px] lg:flex  hidden  2xl:max-w-screen">
+    <div class="md:flex items-center gap-2  hidden">
+        <h1 class="text-xs font-medium">Dashboard</h1>
+        <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+        <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+    </div>
+    <div class="flex items-center gap-2 ">
+       <div class="relative hidden md:block max-w-[230px] w-full">
+          <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+         <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+           </svg>
+           <span class="sr-only">Search icon</span>
+         </div>
+         
+       </div>
+        <img src="messagges.png" alt="" class="size-6 p-1">
+        <img src="notification.png" alt="" class="size-6 p-1">
+        <img src="pic.png" alt="" class="">
+    </div>
+ </div>
+
+        <!-- main content -->
+     <div class="px-5 pt-6 pb-9 bg-[#F7F7F8] h-screen">
+         <!-- inner content -->
+          <div class="bg-white pt-6 pb-20 px-3 md:px-0 shadow-[0_0_20px_0px_#3D3D3D1F] rounded-xl">
+            <div class="max-w-[662px] mx-auto">
+                <h1 class="text-lg font-bold text-black mb-3">Pet’s Love</h1>
+                <p  class="text-sm font-normal text-black mb-6">We’ll automatically stop this ad </p>
+                <!--tabs buttons -->
+                <div class="mb-3">
+                    <ul class="flex flex-wrap gap-3" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                        <li class="" role="presentation">
+                            <button class="w-[87px] h-[37px] px-4 py-3 rounded-lg text-sm font-medium flex items-center !text-[#FF8717] aria-selected:!text-white aria-selected:bg-[#FF8717] aria-selected:border-0 focus:outline-transparent focus:ring-0 !outline-none" id="alltime-tab" data-tabs-target="#alltime" type="button" role="tab" >All Time</button>
+                        </li>
+                        <li class="" role="presentation">
+                            <button class="w-[74px] h-[37px] px-4 py-3 rounded-lg text-sm font-medium flex items-center !text-[#FF8717] aria-selected:!text-white aria-selected:bg-[#FF8717] aria-selected:border-0 focus:outline-transparent focus:ring-0 !outline-none" id="today-tab" data-tabs-target="#today" type="button" role="tab" aria-controls="dashboard" aria-selected="false" >Today</button>
+                        </li>
+                        <li class="" role="presentation">
+                            <button class="w-[110px] h-[37px] px-4 py-3 rounded-lg text-sm font-medium flex items-center !text-[#FF8717] aria-selected:!text-white aria-selected:bg-[#FF8717] aria-selected:border-0 focus:outline-transparent focus:ring-0 !outline-none" id="last7day-tab" data-tabs-target="#last7day" type="button" role="tab" aria-controls="settings" aria-selected="false">Last 7 Days</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="w-[118px] h-[37px] px-4 py-3 rounded-lg text-sm font-medium flex items-center !text-[#FF8717] aria-selected:!text-white aria-selected:bg-[#FF8717] aria-selected:border-0 focus:outline-transparent focus:ring-0 !outline-none" id="last30day-tab" data-tabs-target="#last30day" type="button" role="tab" aria-controls="contacts" aria-selected="false">Last 30 Days</button>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- tabs data -->
+                 <div id="default-tab-content">
+                    <div class="hidden" id="alltime" >
+                        <div class="flex flex-wrap gap-3 mb-3 w-full">
+                            <div class=" w-full max-w-[325px] rounded-lg shadow-[0_0_20px_0px_#3D3D3D1F]  ">
+                                <div class="mx-auto flex flex-col  gap-y-4 py-8 max-w-[90px]">
+                                    <h1 class="text-lg font-extrabold text-center text-[#E7B239] ">3</h1>
+                                    <p class="text-xs font-normal text-center text-black">Total Orders</p>
+                                </div>
+                            </div>
+                            <div class="w-full max-w-[325px] rounded-lg shadow-[0_0_20px_0px_#3D3D3D1F] py-8">
+                               <div class="mx-auto flex flex-col  gap-y-4  max-w-[119px]">
+                                <h1 class="text-lg font-extrabold text-center text-[#029B24]">1K</h1>
+                                <p class="text-xs font-normal text-center text-black">Impressions Gained</p>
+                               </div>
+                            </div>
+                          </div>
+                          <!-- total clicks -->
+                          <div class="p-3 rounded-lg bg-white shadow-[0_0_20px_0px_#3D3D3D1F]">
+                            <div class="pl-3 pr-4 py-2 rounded-lg mb-3 flex justify-between shadow-[0_0_20px_0px_#3D3D3D1F]">
+                                <div class="flex gap-3 items-center">
+                                    <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                    <p class="text-sm font-normal text-gray-900">Total Clicks</p>
+                                </div>
+                                <h1 class="text-lg font-extrabold text-[#029B24]">50</h1>
+                            </div>
+                            <!-- age -->
+                             <div class="flex flex-wrap gap-3">
+                                <div class="max-w-[312px] w-full rounded-lg px-2 py-3 shadow-[0_0_20px_0px_#3D3D3D1F]">
+                                    <h1 class="text-sm font-normal text-gray-900 mb-3">Age</h1>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">13 - 17</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">13 - 17</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">13 - 17</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">13 - 17</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                </div>
+                                <!-- relationship -->
+                                <div class="max-w-[312px] w-full rounded-lg px-3 pt-6 pb-9 shadow-[0_0_20px_0px_#3D3D3D1F]">
+                                    <h1 class="text-sm font-normal text-gray-900 mb-3">Relationship</h1>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">Single</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">Single</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                    <div class="mb-3 flex justify-between ">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                            <p class="text-xs font-normal text-gray-500">Single</p>
+                                        </div>
+                                        <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <!-- last section -->
+                           <div class="px-4 py-3 mb-3">
+                            <!-- counts -->
+                            <div class="sm:flex max-w-[630px] w-full  items-center py-1 rounded-lg mb-3  shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                                <div class="max-w-[423px] flex flex-col sm:flex-row gap-3 sm:gap-12 items-center mx-auto">
+                                    <div class="flex flex-col gap-y-2 sm:gap-y-4 py-3 text-center">
+                                        <h1 class="text-lg font-extrabold text-[#EF6682] ">201</h1>
+                                        <p class="text-xs font-normal text-black">Total Share</p>
+                                    </div>
+                                    <div class="border-[2px] border-[#E6E9F5]  sm:my-0 sm:h-9 w-9 sm:w-0 mx-auto"></div>
+                                    <div class="py-3 flex flex-col gap-y-2 sm:gap-y-4 text-center">
+                                        <h1 class="text-lg font-extrabold text-[#66EF81]">1000</h1>
+                                        <p class="text-xs font-normal text-black">Total Save</p>
+                                    </div>
+                                    <div class="border-[2px] border-[#E6E9F5]  sm:my-0 sm:h-9 w-9 sm:w-0 mx-auto"></div>
+                                    <div class="py-3 flex flex-col gap-y-2 sm:gap-y-4 text-center">
+                                        <h1 class="text-lg font-extrabold text-[#668FEF]">149</h1>
+                                        <p class="text-xs font-normal text-black">Total Comments</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- location -->
+                             <div class="px-3 py-4 rounded-lg mb-3 shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                                <div class="mb-3 flex justify-between items-center">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                        <p class="text-sm font-normal text-gray-900">Location</p>
+                                    </div>
+                                    <h1 class="text-lg font-extrabold text-[#029B24]">Finland</h1>
+                                </div>
+                                <div class="mb-3 flex justify-between items-center">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                        <p class="text-sm font-normal text-gray-900">Location</p>
+                                    </div>
+                                    <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                </div>
+                                <div class="mb-3 flex justify-between items-center">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                        <p class="text-sm font-normal text-gray-900">Location</p>
+                                    </div>
+                                    <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                </div>
+                                <div class="mb-3 flex justify-between items-center">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                        <p class="text-sm font-normal text-gray-900">Location</p>
+                                    </div>
+                                    <button type="button" class="flex items-center rounded-md bg-green-100 px-3 py-1 w-12 text-green-800 text-xs font-medium cursor-pointer">25%</button>
+                                </div>  
+                             </div>
+                             <!-- interests -->
+                             <div class="px-3 py-2 rounded-lg mb-3 flex justify-between shadow-[0_0_20px_0px_#3D3D3D1F]">
+                                <div class="flex gap-3 items-center">
+                                    <img src="./assets/images/blue arrow.png" alt="" class="size-6">
+                                    <p class="text-sm font-normal text-gray-900">Interests</p>
+                                </div>
+                                <h1 class="text-lg font-extrabold text-[#029B24]">12</h1>
+                            </div>
+                            <!-- multi buttons -->
+                            <div class=" rounded-lg  flex justify-between shadow-[0_0_20px_0px_#3D3D3D1F]">
+                                <div class="py-6 pl-3 pr-4 flex flex-wrap gap-3">
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Party</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Dance</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Film Photography</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Cloud Watching</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Party</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Dance</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                    <p class="rounded-md bg-green-100 px-3 py-1  text-green-800 text-xs font-medium cursor-pointer">Gardening</p>
+                                </div>
+                            </div>
+                           </div>
+                           <!-- last button -->
+                            <div class="pt-6 flex justify-end ">
+                                <button type="button" class="px-7 py-2 flex rounded-lg border border-[#000000] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all">Back</button>
+                            </div>
+                    </div>
+                    <div class="hidden" id="today" role="tabpanel" aria-labelledby="today-tab">
+                        <p class="text-sm text-gray-500 ">today data </p>
+                    </div>
+                    <div class="hidden" id="last7day" role="tabpanel" aria-labelledby="last7day-tab">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">last 7 days data</p>
+                    </div>
+                    <div class="hidden" id="last30day" role="tabpanel" aria-labelledby="last30day-tab">
+                        <p class="text-sm text-gray-500">last 30 days data</p>
+                    </div>
+                </div>
+            </div>
+          </div>   
+     </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>

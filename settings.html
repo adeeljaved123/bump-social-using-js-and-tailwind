@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="path/to/nice-select.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        .currentt{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .nice-select .list{
+            max-width: 327px;
+            width: 100%;
+        }
+        .nice-select{
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+        }
+        .button:hover{
+          background-color: #FF8717 !important;
+          color: white !important;
+        }
+        .button{
+          background-color: white !important;
+          color: #1F2A37 !important;
+          border: 1px solid #E5E7EB;
+        }
+        .datepicker-cell:hover{
+          background-color: #FF8717 !important;
+          color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px] h-screen">
+    <!-- main content -->
+     <div class=" bg-[#F7F7F8] pt-8 md:pl-4 md:pr-16 px-3 h-screen">
+         <h1 class="text-2xl font-bold text-[#030229] mb-9">Settings</h1>
+         <div class="bg-white px-3 sm:px-10 pt-[52px] pb-12 rounded-3xl shadow-[0px_0px_2.92px_0px_#00000040]">
+            <div class="mx-auto pt-8 pb-6 px-5 sm:pl-14 mb-12 w-full max-w-[964px] bg-[#FF8717] rounded-lg">
+                <div class="flex flex-wrap gap-3 sm:gap-[138px] items-baseline">
+                    <div class="flex flex-col gap-y-3">
+                        <div class="flex gap-[2px] items-center">
+                            <img src="./assets/images/user-settings.png" alt="" class="size-6">
+                            <h1 class="text-base font-semibold text-white">Manage Account</h1>
+                        </div>
+                        <div class="w-[168px] h-1 bg-white border border-white"></div>
+                    </div>
+                    <div class="flex gap-[2px] items-center">
+                        <img src="./assets/images/lock.png" alt="" class="size-6">
+                        <h1 class="text-base font-semibold text-white">Change Password</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-5 md:gap-[194px] mb-[67px] md:pl-[92px]">
+                <h1 class="text-base font-semibold text-[#312948]">Manage Account</h1>
+                <!-- uploader -->
+                <div class="flex items-center justify-center">
+                    <label for="dropzone-file" class="flex flex-col relative items-center justify-center w-[159px] h-[159px] border-2 border-[#FF8717] border-dashed rounded-full cursor-pointer bg-orange-50">
+                            <p class="text-base font-semibold text-[#FF8717]">No photo</p>
+                            <div class="absolute end-0 top-[85px]">
+                                <img src="./assets/images/camera.png" alt="" class="w-[34px] h-[34px]">
+                            </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div> 
+            </div>
+            <!-- forms -->
+             <div class="flex flex-col md:flex-row gap-3 md:gap-7 mb-3 md:mb-9">
+                <div class="w-full max-w-[419px]">
+                    <label  class="block mb-2 text-sm font-medium text-gray-900">First Name*</label>
+                    <input  class="bg-gray-100 border border-gray-100 rounded-lg !outline-none text-black text-sm font-normal placeholder-gray-400  block w-full px-5 py-3" placeholder="Philips" required />
+                </div>
+                <div class="w-full max-w-[419px]">
+                    <label  class="block mb-2 text-sm font-medium text-gray-900">Last Name*</label>
+                    <input  class="bg-gray-100 border border-gray-100 rounded-lg !outline-none text-black text-sm font-normal placeholder-gray-400  block w-full px-5 py-3" placeholder="Smith" required />
+                </div>
+             </div>
+             <div class="w-full max-w-[867px] mb-4 md:mb-12">
+                <label  class="block mb-2 text-sm font-medium text-gray-900">Email*</label>
+                <input  class="bg-gray-100 border border-gray-100 rounded-lg !outline-none text-black text-sm font-normal placeholder-gray-400  block w-full px-5 py-3" placeholder="adammartin@example.com" required />
+            </div>
+            <!-- buttons -->
+            <div class="flex gap-2 md:gap-5">
+                <button type="button" class="w-full max-w-[423px] py-3 rounded-lg border border-[#FF8717] text-[#FF8717] text-xs font-medium hover:border-transparent hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Save</button>
+                <button type="button" class="w-full max-w-[423px] py-3 rounded-lg border border-[#FF8717] text-[#FF8717] hover:border-transparent text-xs font-medium hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Cancel</button>
+            </div>
+         </div>
+     </div>
+ </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="path/to/nice-select.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        .pagination{
+           
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .previous_page{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           border-radius: 4px 0px 0px 4px;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .currentt{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .two{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .next_page{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           border-radius: 0px 4px 4px 0px;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .three{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+      </style>
+</head>
+<body>
+
+  <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px] h-screen">
+    <!-- nav -->
+  <div class="items-center justify-between   px-3 py-[21px] lg:flex  hidden  2xl:max-w-screen">
+    <div class="md:flex items-center gap-2  hidden">
+        <h1 class="text-xs font-medium">Dashboard</h1>
+        <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+        <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+    </div>
+    <div class="flex items-center gap-3 ">
+       <div class="relative hidden md:block max-w-[230px] w-full">
+          <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+         <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+           </svg>
+           <span class="sr-only">Search icon</span>
+         </div>
+         
+       </div>
+       
+        <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="relative  inline-flex items-center text-sm font-medium text-center text-gray-500  focus:outline-none " type="button">
+            <img src="./assets/images/messages.png" alt="" class="size-6 ">
+        </button>
+        <img src="./assets/images/notification.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/pic.png" alt="" class="">
+    </div>
+ </div>
+    <!-- main content -->
+     <div class="px-[21px] pt-[21px] pb-[105px] bg-[#F7F7F8] h-screen">
+        <!-- products -->
+         <div class="flex flex-wrap items-center justify-between mb-[28px]">
+            <h1 class="text-lg text-[#000000]  font-bold">Report</h1>
+            <button type="button" class="w-[135px] h-[34px] flex justify-center items-center px-4 py-2 rounded-lg bg-[#FF8717] text-white whitespace-nowrap text-xs font-medium">Add New Product</button>
+         </div>
+         <div class="w-full bg-gray-100 shadow-[0_1px_2px_-1px_#0000001A]">
+            <!-- table -->
+            <div class=" overflow-auto mb-[23px] rounded-lg bg-gray-50 shadow-[0_1px_2px_1px_#0000001A] ">
+              <table class="table w-full ">
+             <thead>
+                <tr class="border-b bg-gray-50">
+                   <th class=" p-4">    
+                   </th>
+                   <th class="text-start items-center p-4">
+                      <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">REPORT BY</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                    <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">ORDER ID</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                    <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">STATUS</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                    <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">DATE</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                    <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">EMAIL</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                      <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">Description</h1>
+                   </th>
+                   <th class="text-start items-center p-4">
+                    <h1 class="text-xs font-semibold text-gray-500 whitespace-nowrap">ACTION</h1>
+                 </th>
+                </tr>
+                <!-- first -->
+                <tr class="border-b bg-[#FFFFFF] ">
+                   <th class="items-center px-4 py-[19px] ">
+                      <input  type="checkbox"  class="justify-start flex items-center  p-[2.5px] gap-[2.5px] w-4 h-4  text-[#FF8717] !appearance-none  !outline-none bg-gray-50 border-[0.5px] border-gray-300 rounded  "/>
+                   </th>
+                   <th class="text-start items-center py-[11px]  flex gap-[10px] w-[182px]  item-center pl-4 pr-7 md:pr-[33px]">
+                    <img src="./assets/images/pic.png" alt="" class="size-8">
+                      <h1 class="text-sm font-normal text-[#6B7280] whitespace-nowrap">Adam Martin</h1>
+                   </th>
+                   <th class="text-start    p-4">
+                    <h1 class="text-sm font-normal flex items-center text-[#6B7280] h-[22px] w-[108px] whitespace-nowrap">1000001</h1>
+                   </th>
+                   <th class="text-start items-center   pl-4 pr-[18px] py-4">
+                    <select  class="block  w-[90px] pl-[10px] pr-[8px] pb-[5px] pt-[2px] text-xs font-medium text-[#FF2700]  rounded-md bg-[#FEEFEB] border-0 focus:border-0 focus:outline-0 focus:outline-none focus:ring-0 !outline-none">
+                        <option data-display="select">Select</option>
+                        <option>Resolved</option>
+                        <option>pending</option>
+                     </select>
+                   </th>
+                   <th class="text-start items-center  p-4">
+                    <h1 class="text-sm font-normal text-[#6B7280] w-[108px] whitespace-nowrap">10-08-24</h1>
+                   </th>
+                   <th class="text-start items-center   p-4">
+                    <h1 class="text-sm font-normal text-[#6B7280] w-[137px]  whitespace-nowrap">adil@gmail.com</h1>
+                   </th>
+                   <th class="text-start items-center   p-4">
+                    <h1 class="text-sm font-normal  w-[358px] text-[#6B7280] whitespace-nowrap">SingleLorem Ipsum is simply dummy text the</h1>
+                   </th>
+                   <th class="flex gap-3 items-center w-[125px]  pl-[16px] pr-[85px] py-[15px]">
+                    <img src="./assets/images/eye.png" alt="" class="size-6"> 
+                   </th>
+                </tr>
+                <!-- second row -->
+                <tr class="border-b bg-[#FFFFFF] ">
+                    <th class="items-center px-4 py-[19px] ">
+                       <input  type="checkbox"  class="justify-start flex items-center  p-[2.5px] gap-[2.5px] w-4 h-4  text-[#FF8717] !appearance-none  !outline-none bg-gray-50 border-[0.5px] border-gray-300 rounded  "/>
+                    </th>
+                    <th class="text-start items-center py-[11px]  flex gap-[10px] w-[182px]  item-center pl-4 pr-7 md:pr-[33px]">
+                     <img src="./assets/images/pic.png" alt="" class="size-8">
+                       <h1 class="text-sm font-normal text-[#6B7280] whitespace-nowrap">Adam Martin</h1>
+                    </th>
+                    <th class="text-start    p-4">
+                     <h1 class="text-sm font-normal flex items-center text-[#6B7280] h-[22px] w-[108px] whitespace-nowrap">1000001</h1>
+                    </th>
+                    <th class="text-start items-center   pl-4 pr-[23px] py-4">
+                        <select  class="block  w-[90px] pl-[10px] pr-[8px] pb-[5px] pt-[2px] text-xs font-medium text-[#FF2700]  rounded-md bg-[#FEEFEB] border-0 focus:border-0 focus:outline-0 focus:outline-none focus:ring-0 !outline-none">
+                            <option data-display="select">Select</option>
+                            <option>Resolved</option>
+                            <option>pending</option>
+                         </select>
+                    </th>
+                    <th class="text-start items-center  p-4">
+                     <h1 class="text-sm font-normal text-[#6B7280] w-[108px] whitespace-nowrap">10-08-24</h1>
+                    </th>
+                    <th class="text-start items-center   p-4">
+                     <h1 class="text-sm font-normal text-[#6B7280] w-[137px]  whitespace-nowrap">adil@gmail.com</h1>
+                    </th>
+                    <th class="text-start items-center   p-4">
+                     <h1 class="text-sm font-normal  w-[358px] text-[#6B7280] whitespace-nowrap">SingleLorem Ipsum is simply dummy text the</h1>
+                    </th>
+                    <th class="flex gap-3 items-center w-[125px]  pl-[16px] pr-[85px] py-[15px]">
+                     <img src="./assets/images/eye.png" alt="" class="size-6"> 
+                    </th>
+                 </tr>
+                <!-- third row -->
+                
+                <!-- fourth row -->
+             </thead>
+           </table>
+           </div>
+           </div>
+           <!-- previous -->
+           <div class="mx-auto">
+            <div role="navigation" aria-label="Pagination" class="pagination"><span class="previous_page disabled" aria-disabled="true">← Previous</span> <em class="currentt" aria-label="Page 1" aria-current="page">1</em> <a rel="next" class="two" aria-label="Page 2" href="/users?page=2">2</a> <a aria-label="Page 3" class="three" href="/users?page=3">3</a> <a class="next_page" rel="next" href="/users?page=2">Next →</a></div>
+           </div>   
+           <!-- notification -->
+            <!-- Dropdown menu -->
+   <div id="dropdownNotification" class="z-20 hidden w-full max-w-[314px] bg-white rounded-lg shadow d" >
+    <div class="block px-4 py-2 font-medium text-xs text-center text-gray-900 rounded-t-lg bg-gray-50 ">Notifications</div>
+    <div class="">
+      <a href="#" class="flex px-3 py-3 border-b border-gray-200">
+        <div class="flex-shrink-0 pt-1">
+          <img class="rounded-full w-11 h-11" src="./assets/images/pic.png" alt="">  
+        </div>
+        <div class="w-full ps-3">
+            <p class="text-gray-900 text-xs font-medium mb-1.5">Adam Martin<span class="text-sm font-medium text-gray-500"> reported against D10001 Order.</span></p>
+            <p class="text-[10px] font-normal text-[#1A56DB]">a few moments ago</p>
+        </div>
+      </a>
+      <a href="#" class=" px-3 py-3 flex  border-b border-gray-200">
+        <div class="flex-shrink-0 pt-1">
+          <img src="./assets/images/pic.png" class="rounded-full w-11 h-11" src="" alt="">
+        </div>
+        <div class="w-full ps-3">
+            <p class="text-gray-900 text-xs font-medium mb-1.5">Adam Martin<span class="text-sm font-medium text-gray-500"> reported against D10001 Order.</span></p>
+            <p class="text-[10px] font-normal text-[#1A56DB]">a few moments ago</p>
+        </div>
+      </a> 
+    </div>
+    <a href="#" class="block py-2 text-xs font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 ">
+      <div class="inline-flex items-center ">
+        <p class="text-xs font-medium text-gray-900">Load More</p>
+      </div>
+    </a>
+  </div>
+     </div>
+ </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+    $('select').niceSelect();
+    });
+</script>

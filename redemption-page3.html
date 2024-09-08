@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="path/to/nice-select.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .iti__selected-flag{
+            background-color: white !important;
+            border-top-left-radius: 8px ;
+            border-bottom-left-radius: 8px ;
+            border-right: 1px solid #D1D5DB;
+            padding-right: 12px;
+        }
+        .iti__country-list{
+            max-width: 327px;
+            width: 100%;
+        }
+        .chosen{
+            padding-right: 51px !important;
+        }
+        .currentt{
+           padding-top: 6px;
+           padding-bottom: 6px;
+           padding-left: 12px;
+           padding-right: 12px;
+           border: 1px solid #D1D5DB;
+           background-color: #FFFFFF;
+           font-size: 14px;
+           font-weight: 500;
+           color: #6B7280;
+           align-items: center;
+        }
+        .nice-select .list{
+            max-width: 327px;
+            width: 100%;
+        }
+        .nice-select{
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px]  h-screen">
+    <!-- nav -->
+  <div class="items-center    px-3 py-[21px] flex flex-wrap  2xl:max-w-screen">
+    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg  lg:hidden  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+        </svg>
+     </button>
+    <div class="items-center flex flex-wrap justify-between gap-y-3">
+        <div class="md:flex items-center gap-2  ">
+            <h1 class="text-xs font-medium">Dashboard</h1>
+            <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+            <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+        </div>
+        <div class="flex flex-row flex-wrap items-center gap-2 ">
+           <div class="relative   max-w-[230px] w-full">
+              <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+             <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+               <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+               </svg>
+               <span class="sr-only">Search icon</span>
+             </div>
+           </div>
+            <img src="messagges.png" alt="" class="size-6 p-1">
+            <img src="notification.png" alt="" class="size-6 p-1">
+            <img src="pic.png" alt="" class="">
+        </div>
+    </div>
+ </div>
+       <!-- main content -->
+     <div class="sm:px-5 px-3 sm:pt-5 sm:pb-8 bg-[#F7F7F8] h-screen">
+         <!-- inner content -->
+          <div class="bg-[#FFFFFF] rounded-2xl px-5 py-[70px] shadow-[0px_0px_20px_0px_#3D3D3D1F]">
+            <div class="max-w-[666px] mx-auto">
+                <h1 class="text-lg font-bold text-center text-[#FF8717] mb-3">Address Details</h1>
+                <p class=" text-sm font-normal text-center text-black mb-6">Please provide your delivery address for the gift.</p>
+                 <!-- first row -->
+                <div class="flex flex-col sm:flex-row gap-2 mb-3">
+                    <div class="w-full max-w-[327px]">
+                        <label  class="block mb-2 text-xs font-normal text-gray-900">Country</label>
+                              <select  class="block  w-full h-12 bg-gray-50 py-3 px-4 text-sm text-black border border-gray-300 rounded-lg focus:outline-transparent focus:border-gray-300 focus:ring-0 !outline-none">
+                                <option data-display="select">Select</option>
+                                <option>pakistan</option>
+                                <option>america</option>
+                              </select>
+                    </div>
+                    <div class="w-full max-w-[327px]">
+                        <label  class="block mb-2 text-xs font-normal text-gray-900">State</label>
+                              <select  class="block  w-full h-12 bg-gray-50 py-3 px-4 text-sm text-black border border-gray-300 rounded-lg focus:outline-transparent focus:border-gray-300 focus:ring-0 !outline-none">
+                                <option>lahore</option>
+                                <option>islamabad</option>
+                              </select>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="flex flex-col sm:flex-row gap-2 mb-3">
+                    <div class="w-full max-w-[327px]">
+                        <label  class="block mb-2 text-xs font-normal text-gray-900">City</label>
+                              <select  class="block  w-full h-12 bg-gray-50 py-3 px-4 text-sm text-black border border-gray-300 rounded-lg focus:outline-transparent focus:border-gray-300 focus:ring-0 !outline-none">
+                                <option>lahore</option>
+                                <option>islamabad</option>
+                              </select>
+                    </div>
+                    <div class="w-full max-w-[327px]">
+                        <label  class="block mb-2 text-xs font-normal text-gray-900">Address line 1</label>
+                              <select  class="block  w-full h-12 bg-gray-50 py-3 px-4 text-sm text-black border border-gray-300 rounded-lg focus:outline-transparent focus:border-gray-300 focus:ring-0 !outline-none">
+                                <option>laptop</option>
+                                <option>phone</option>
+                              </select>
+                    </div>
+                </div>
+                <!-- third row -->
+                    <div class="w-full max-w-[327px] mb-6">
+                        <label  class="block mb-2 text-sm font-medium text-black">Phone</label>
+                        <input type="text" id="phone_number" name="user[phone_number]" class="chosen py-[11px] pl-12 pr-[51px] bg-gray-50 w-full rounded-lg border border-gray-300 focus:outline-transparent focus:border-gray-300 focus:ring-0 !outline-none placeholder-black" placeholder="123 4567 890">
+                    </div> 
+                <!-- buttons -->
+                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="px-[21px] py-2 flex rounded-lg border border-gray-300 hover:border-transparent text-xs font-medium hover:bg-[#FF8717] hover:text-white transition-all cursor-pointer">Submit</button>
+                    <!-- modal -->
+                    <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent  rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <div class="p-4 md:p-5 text-center">
+                                    <img src="./assets/images/redeemed successfuly.png" alt="" class="mx-auto mt-[26px] mb-4 size-9">
+                                    <h3 class="mb-4 text-base font-bold text-black text-center mx-8">Redeemed Successfully</h3>
+                                    <p class="text-sm font-normal text-gray-500 mb-5 mx-14">Your reward will be delivered to you within
+                                        5 working days.</p>
+                                    <button data-modal-hide="popup-modal" type="button" class="text-white bg-[#FF8717] font-medium rounded-lg text-sm inline-flex items-center px-3 py-2 text-center">Okay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+     </div>
+ </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+  var input = document.querySelector("#phone_number");
+ 
+  // Initialize intl-tel-input with auto-country detection
+  var iti = window.intlTelInput(input, {
+    initialCountry: "auto",
+    separateDialCode: true,
+    geoIpLookup: function(success, failure) {
+      $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        var countryCode = (resp && resp.country) ? resp.country : "us";
+        success(countryCode);
+      });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // For formatting and validation
+  });
+  ("#iti-0__country-listbox").chosen()
+});
+$(document).ready(function() {
+    $('select').niceSelect();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+

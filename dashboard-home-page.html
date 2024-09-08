@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- main body -->
+ <div class="xl:ml-[240px] lg:ml-[200px] h-screen">
+    <!-- nav -->
+  <div class="items-center justify-between   px-3 py-[21px] lg:flex  hidden  2xl:max-w-screen">
+    <div class="md:flex items-center gap-2  hidden">
+        <h1 class="text-xs font-medium">Dashboard</h1>
+        <img src="dashboard arrow.png" alt="" class="mt-[2px]">
+        <h1 class="text-xs font-medium text-[#FF8717]">Jobs</h1>
+    </div>
+    <div class="flex items-center gap-3 ">
+       <div class="relative hidden md:block max-w-[230px] w-full">
+          <input type="text" id="search-navbar" class="text-nowrap block w-full max-w-[230px] pl-2 pt-2 pb-2 pr-2 ps-4 text-sm text-black border border-white rounded-2xl !bg-[#FFFFFF]   dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white  " placeholder="Search..."> 
+         <div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+           </svg>
+           <span class="sr-only">Search icon</span>
+         </div>
+         
+       </div>
+        <img src="./assets/images/messages.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/notification.png" alt="" class="size-6 p-1">
+        <img src="./assets/images/pic.png" alt="" class="">
+    </div>
+ </div>
+    <!-- main content -->
+     <div class="lg:pl-4 px-4 lg:pr-5 pt-6 bg-[#F7F7F8] h-screen">
+         <div class="flex flex-col xl:flex-row gap-3">
+            <!-- grid -->
+             <div class="grid grid-cols-4 gap-3 w-full">
+                <div class="px-6 py-4 col-span-4 sm:col-span-1 xl:col-span-2 w-full bg-white rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="flex flex-col gap-y-10">
+                        <div class="flex justify-between items-center">
+                            <img src="./assets/images/dashboard circle.png" alt="" class="w-[46px] h-[46px]">
+                            <h1 class="text-base font-extrabold text-[#E74A39] truncate">502175</h1>
+                        </div>
+                        <p class="text-sm/3 text-black font-normal">Total Ads</p>
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="px-6 py-4 col-span-4 sm:col-span-1 xl:col-span-2 w-full bg-white rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="flex flex-col gap-y-10">
+                        <div class="flex justify-between items-center">
+                            <img src="./assets/images/dashboard circle.png" alt="" class="w-[46px] h-[46px]">
+                            <h1 class="text-base font-extrabold text-[#E74A39] truncate">502175</h1>
+                        </div>
+                        <p class="text-sm/3 text-black font-normal">Total Clicks</p>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="px-6 py-4 col-span-4 sm:col-span-1 xl:col-span-2 w-full bg-white rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="flex flex-col gap-y-10">
+                        <div class="flex justify-between items-center">
+                            <img src="./assets/images/dashboard circle.png" alt="" class="w-[46px] h-[46px]">
+                            <h1 class="text-base font-extrabold text-[#E74A39] truncate">502175</h1>
+                        </div>
+                        <p class="text-sm/3 text-black font-normal">Total Impressions</p>
+                    </div>
+                </div>
+                <!-- fourth -->
+                <div class="px-6 py-4 col-span-4 sm:col-span-1 xl:col-span-2 w-full bg-white rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="flex flex-col gap-y-10">
+                        <div class="flex justify-between items-center">
+                            <img src="./assets/images/dashboard circle.png" alt="" class="w-[46px] h-[46px]">
+                            <h1 class="text-base font-extrabold text-[#E74A39] truncate">502175</h1>
+                        </div>
+                        <p class="text-sm/3 text-black font-normal">Total Impressions</p>
+                    </div>
+                </div>
+                <!-- fifth -->
+                <div class="px-6 py-4 col-span-4 sm:col-span-1 xl:col-span-4 w-full bg-white rounded-xl shadow-[0px_0px_20px_0px_rgba(61,61,61,0.12)]">
+                    <div class="flex flex-col gap-y-10">
+                        <div class="flex justify-between items-center">
+                            <img src="./assets/images/dashboard circle.png" alt="" class="w-[46px] h-[46px]">
+                            <h1 class="text-base font-extrabold text-[#E74A39] truncate">$502,175</h1>
+                        </div>
+                        <p class="text-sm/3 text-black font-normal">Total Packages Purchased</p>
+                    </div>
+                </div>
+             </div>
+         <!-- right side -->
+          <div class="p-2 w-full bg-white rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1)]">
+            <h1 class="text-base text-gray-900 font-bold mb-3">Analytics</h1>
+            <div class="px-3 pt-3 pb-9 flex flex-col gap-y-6 rounded-lg bg-gray-50">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="w-full bg-orange-50 rounded-lg">
+                        <div class="px-12 md:px-16 py-9">
+                            <div class="w-[76px] flex flex-col gap-y-2 justify-center items-center mx-auto">
+                                <img src="./assets/images/5 pic.png" alt="" class="size-8">
+                                <p class="text-sm font-normal text-orange-600">Total Posts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full bg-teal-50 rounded-lg">
+                        <div class="px-12 md:px-16 py-9">
+                            <div class="w-[76px] flex flex-col gap-y-2 justify-center items-center mx-auto">
+                                <img src="./assets/images/10 pic.png" alt="" class="size-8">
+                                <p class="text-sm font-normal text-teal-600">Total Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full bg-[#EBF5FF] rounded-lg">
+                        <div class="px-12 md:px-16 py-9">
+                            <div class="w-[76px] flex flex-col gap-y-2 justify-center items-center mx-auto">
+                                <img src="./assets/images/18 pic.png" alt="" class="size-8">
+                                <p class="text-sm font-normal text-[#1C64F2]">Total Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3 border-t border-gray-200 flex flex-col gap-y-6">
+                    <div class="flex justify-between">
+                        <h1 class="text-sm font-normal text-black">Community Members</h1>
+                        <h1 class="block text-center rounded-md bg-gray-100 px-3 py-[2px] text-gray-500 text-xs font-medium cursor-pointer">20</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h1 class="text-sm font-normal text-black">Total Followers</h1>
+                        <h1 class="block text-center rounded-md bg-gray-100 px-3 py-[2px] text-gray-500 text-xs font-medium cursor-pointer">48000</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h1 class="text-sm font-normal text-black">Total Ongoing Ads</h1>
+                        <h1 class="block text-center rounded-md bg-gray-100 px-3 py-[2px] text-gray-500 text-xs font-medium cursor-pointer">100k+</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h1 class="text-sm font-normal text-black">Goal Achieved</h1>
+                        <h1 class="block text-center rounded-md bg-gray-100 px-3 py-[2px] text-gray-500 text-xs font-medium cursor-pointer">100k+</h1>
+                    </div>
+                </div>
+            </div>
+          </div>
+         </div> 
+     </div>
+ </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>
